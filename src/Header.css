@@ -1,0 +1,30 @@
+/* Header.css */
+.navbar {
+  background-color: #f8f9fa;
+}
+
+.navbar-brand {
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff6f00;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 10px;
+}
+
+.social-networks .nav-link {
+  font-size: 18px;
+}
