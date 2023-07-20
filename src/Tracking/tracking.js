@@ -77,12 +77,26 @@ function Tracking() {
           {/* Display tracking result based on selected courier */}
           {selectedCourier === 'DHL' && (
             <>
-              <p>Codice tracciabilità: {trackingResult.shipments[0].id}</p>
-              <p>Stato: {trackingResult.shipments[0].status.statusCode}</p>
-              <p>Data di consegna prevista: {trackingResult.shipments[0].estimatedTimeOfDelivery}</p>
-              <p>CAP di consegna: {trackingResult.shipments[0].destination.address.postalCode}</p>
-              <p>Ultima posizione: {trackingResult.shipments[0].status.location.address.addressLocality}</p>
-            </>
+            <p>Codice tracciabilità: {trackingResult.shipments[0].id}</p>
+            <p>Stato: {trackingResult.shipments[0].status.statusCode}</p>
+            <p>Servizio: {trackingResult.shipments[0].service}</p>
+            <p>Luogo: {trackingResult.shipments[0].status.description}</p>
+            <p>
+              Data di consegna prevista:{" "}
+              {trackingResult.shipments[0].estimatedTimeOfDelivery}
+            </p>
+            <p>
+              CAP di consegna:{" "}
+              {trackingResult.shipments[0].destination.address.postalCode}
+            </p>
+            <p>
+              Ultima posizione:{" "}
+              {
+                trackingResult.shipments[0].status.location.address
+                  .addressLocality
+              }
+            </p>
+          </>
           )}
           {selectedCourier === 'GLS' && (
             <>
